@@ -8,9 +8,9 @@
         </router-link>
       </h1>
       <v-spacer></v-spacer>
-      <v-btn outlined color="#0288d1" to="/" class="mx-2">Accueil</v-btn>
-      <v-btn outlined color="#0288d1" to="/mon-cv" class="mx-2">Mon CV</v-btn>
-      <v-btn outlined color="#0288d1" to="/contact" class="mx-2">Contact</v-btn>
+      <v-btn outlined color="#1976d2" to="/" class="mx-2">Accueil</v-btn>
+      <v-btn outlined color="#1976d2" to="/mon-cv" class="mx-2">Mon CV</v-btn>
+      <v-btn outlined color="#1976d2" to="/contact" class="mx-2">Contact</v-btn>
     </v-app-bar>
     <v-content>
       <transition :name="transitionName">

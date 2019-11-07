@@ -11,14 +11,21 @@
           class="ma-3"
           id="learn-more"
         >EN APPRENDRE PLUS</v-btn>
-        <footer class="welcome-footer">
+        <div class="welcome-footer" />
+        <footer>
           <v-row>
             <v-col>
-              <p>Tu peux aussi me suivre sur les réseaux sociaux et suivre mes travaux</p>
+              <p
+                id="social-media-message"
+              >Tu peux aussi me suivre sur les réseaux sociaux et suivre mes travaux</p>
               <v-row>
                 <v-col id="social-media-icon-list">
-                  <LinkedInIcon class="icon-2x"/>
-                  <GithubIcon class="icon-2x"/>
+                  <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank">
+                    <LinkedInIcon class="icon-2x" @click="goTo($event)" />
+                  </a>
+                  <a href="https://github.com/Viet-Hoang-PHAN/">
+                    <GithubIcon class="icon-2x" @click="goTo($event)" />
+                  </a>
                 </v-col>
               </v-row>
             </v-col>
@@ -31,21 +38,37 @@
 
 <script>
 import LinkedInIcon from "vue-material-design-icons/Linkedin.vue";
-import GithubIcon from "vue-material-design-icons/GithubCircle.vue"
+import GithubIcon from "vue-material-design-icons/GithubCircle.vue";
 export default {
   components: {
     LinkedInIcon,
     GithubIcon
+  },
+  methods: {
+    goTo: evt => {
+      const target = evt.target.textContent.split(" ")[0];
+      switch (target) {
+        case "Github":
+          console.log("ok");
+          break;
+
+        default:
+          break;
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss">
+a {
+  text-decoration: none;
+}
 #welcome {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(1.6turn, #0288d1, #81d4fa);
+  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
 }
 
 #welcome-message {
@@ -58,9 +81,13 @@ export default {
   animation: slide 2s reverse;
 }
 
-#social-media {
-  top: 10%;
-  display: inline-block;
+#social-media-message {
+  width: 50%;
+  margin: auto;
+  color: white;
+  opacity: 0;
+  animation: slide 1.3s 1.5s reverse;
+  animation-fill-mode: forwards;
 }
 
 footer > div {
@@ -85,6 +112,15 @@ footer > div {
   animation-fill-mode: forwards;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+}
+
 .container {
   z-index: 1;
   height: 100vh;
@@ -92,11 +128,11 @@ footer > div {
 
 .material-design-icon.icon-2x {
   height: 2em;
-  width:2em;
+  width: 2em;
   margin-left: 10px;
   margin-right: 10px;
 }
- 
+
 .material-design-icon.icon-2x > .material-design-icon__svg {
   height: 2em;
   width: 2em;
@@ -104,11 +140,9 @@ footer > div {
 
 .material-design-icon.icon-2x > .material-design-icon__svg:hover {
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.6;
   border-radius: 10px;
-  cursor: pointer;
 }
-
 
 .linkedin-icon {
   opacity: 0;
