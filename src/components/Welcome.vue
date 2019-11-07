@@ -21,10 +21,10 @@
               <v-row>
                 <v-col id="social-media-icon-list">
                   <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank">
-                    <LinkedInIcon class="icon-2x" @click="goTo($event)" />
+                    <LinkedInIcon class="icon-2x"/>
                   </a>
                   <a href="https://github.com/Viet-Hoang-PHAN/">
-                    <GithubIcon class="icon-2x" @click="goTo($event)" />
+                    <GithubIcon class="icon-2x"/>
                   </a>
                 </v-col>
               </v-row>
@@ -44,19 +44,6 @@ export default {
     LinkedInIcon,
     GithubIcon
   },
-  methods: {
-    goTo: evt => {
-      const target = evt.target.textContent.split(" ")[0];
-      switch (target) {
-        case "Github":
-          console.log("ok");
-          break;
-
-        default:
-          break;
-      }
-    }
-  }
 };
 </script>
 
@@ -68,7 +55,6 @@ a {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
 }
 
 #welcome-message {
@@ -95,6 +81,10 @@ footer > div {
   height: 100%;
 }
 
+footer {
+  height: 19vh;
+}
+
 .welcome-footer {
   top: 75vh;
   height: 100vh;
@@ -114,7 +104,7 @@ footer > div {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
   width: 100%;
   margin: 0;
   justify-content: center;
@@ -123,7 +113,7 @@ footer {
 
 .container {
   z-index: 1;
-  height: 100vh;
+  height: 93%;
 }
 
 .material-design-icon.icon-2x {
@@ -170,12 +160,10 @@ footer {
 @keyframes slide {
   from {
     opacity: 0.8;
-    top: 100%;
     transform: translateY(0);
   }
   to {
     opacity: 0;
-    top: 0%;
     transform: translateY(100%);
   }
 }

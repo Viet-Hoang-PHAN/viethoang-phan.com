@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app class="d-flex align-end">
+    <v-app-bar app class="d-flex align-end" color="transparent" flat>
       <h1 class="headline text-uppercase title">
         <router-link to="/">
         <span class="name font-weight-light font-italic px-1">Viet-Hoang</span>
@@ -8,9 +8,9 @@
         </router-link>
       </h1>
       <v-spacer></v-spacer>
-      <v-btn outlined color="#1976d2" to="/" class="mx-2">Accueil</v-btn>
-      <v-btn outlined color="#1976d2" to="/mon-cv" class="mx-2">Mon CV</v-btn>
-      <v-btn outlined color="#1976d2" to="/contact" class="mx-2">Contact</v-btn>
+      <v-btn text color="white" to="/" class="mx-2">Accueil</v-btn>
+      <v-btn text color="white" to="/mon-cv" class="mx-2">Mon CV</v-btn>
+      <v-btn text color="white" to="/contact" class="mx-2">Contact</v-btn>
     </v-app-bar>
     <v-content>
       <transition :name="transitionName">
@@ -44,6 +44,11 @@ export default {
 <style lang="scss">
 
 
+#app {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
+}
 h1 > a {
   text-decoration: none;
   color: black
@@ -51,45 +56,31 @@ h1 > a {
 
 .name {
   font-family: "Merriweather", serif;
+  color: white;
+  opacity: 0.8
 }
 
-.v-content {
-  padding: 0 !important;
-}
-
-header {
-  top: -93vh !important;
-  height: 100vh !important;
-  border-radius: 600px 600px 200px 200px !important;
-}
 
 .v-toolbar__content {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0.8;
 }
 
 .effect-enter-active {
   animation: slideUp 2s;
 }
 .effect-leave-active {
-  animation: slideOut 2s;
+  animation: slideUp 1s reverse;
 }
 
 @keyframes slideUp {
-  from {
-    top: 100%;
+  0% {
+    transform: translateY(110%);
   }
-  to {
-    top: 0;
-  }
-}
-@keyframes slideOut {
-  from {
-    top: 0;
-  }
-  to {
-    top: -168%;
+  100% {
+    transform: translateY(0)
   }
 }
 </style>
