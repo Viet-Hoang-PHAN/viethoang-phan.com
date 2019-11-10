@@ -73,7 +73,7 @@ export default {
 }
 
 #learn-more {
-  animation: slide 2s reverse;
+  animation: slide 1.5s reverse;
 }
 
 #social-media-message {
@@ -87,7 +87,7 @@ export default {
 
 .v-footer {
   visibility: hidden;
-  animation: slide-up-footer 2s 1s;
+  animation: slide-up-footer 1.5s 1s;
   animation-fill-mode: forwards;
 }
 

@@ -48,6 +48,5 @@ h1 > a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.9;
 }
 </style>
