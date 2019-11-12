@@ -60,7 +60,6 @@ export default {
 .v-application a {
   text-decoration: none;
   color: white !important;
-  opacity: 0.8;
 }
 #welcome {
   height: 100%;

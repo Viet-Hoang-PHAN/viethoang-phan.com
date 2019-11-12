@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app class="d-flex align-end" color="transparent" flat>
+  <v-app-bar app class="d-flex align-end" hide-on-scroll flat fixed>
     <h1 class="headline text-uppercase title">
       <router-link to="/">
         <span class="name font-weight-light font-italic px-1">Viet-Hoang</span>
@@ -41,12 +41,15 @@ h1 > a {
 .name {
   font-family: "Merriweather", serif;
   color: white;
-  opacity: 0.9;
 }
 
 .v-toolbar__content {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+header {
+  
+  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
 }
 </style>

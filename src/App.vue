@@ -40,6 +40,10 @@ export default {
   box-sizing: border-box;
 }
 
+p {
+  color: white;
+}
+
 #app {
   height: 100vh;
   width: 100%;
@@ -47,11 +51,11 @@ export default {
 }
 
 .effect-enter-active {
-  animation: slideUp 1s reverse;
+  animation: slideDown 1s reverse;
 }
 
 .effect-leave-active {
-  animation: slideUp 0.5s
+  animation: slideDown 0.5s
 }
 
 @keyframes slideUp {
@@ -60,6 +64,15 @@ export default {
   }
   100% {
     transform: translateY(-100vh)
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(100vh)
   }
 }
 
