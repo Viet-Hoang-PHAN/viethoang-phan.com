@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app class="d-flex align-end" hide-on-scroll flat fixed>
+  <v-app-bar app class="d-flex align-end" hide-on-scroll flat fixed color="rgba(0, 0, 0, 0.4)">
     <h1 class="headline text-uppercase title">
       <router-link to="/">
         <span class="name font-weight-light font-italic px-1">Viet-Hoang</span>
@@ -50,6 +50,6 @@ h1 > a {
 }
 header {
   
-  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
+  background-color: rgba(0, 0, 0, 0.4)
 }
 </style>

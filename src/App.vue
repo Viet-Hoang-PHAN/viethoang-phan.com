@@ -47,7 +47,8 @@ p {
 #app {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(2.1turn, #0288d1, #81d4fa);
+  background: url("./assets/night_sky.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 .effect-enter-active {

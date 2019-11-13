@@ -1,26 +1,26 @@
 <template>
-<div id="resume">
-  <AboutMe />
-  <Objective />
-  <Experiences />
-</div>
+  <div id="resume">
+    <AboutMe />
+    <Objective />
+    <Experiences />
+  </div>
 </template>
 
 <script>
 import AboutMe from "../components/AboutMe";
 import Objective from "../components/Objective";
-import Experiences from '../components/Experiences'
+import Experiences from "../components/Experiences";
 export default {
-    components: {
-        AboutMe,
-        Objective,
-        Experiences
-    }
-}
+  components: {
+    AboutMe,
+    Objective,
+    Experiences
+  }
+};
 </script>
 
 <style lang="scss">
 #resume {
-    height: 100%;
+  height: 100%;
 }
 </style>

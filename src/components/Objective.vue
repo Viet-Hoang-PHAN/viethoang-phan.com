@@ -1,30 +1,31 @@
 <template>
   <div id="objective" class="py-12">
-      <v-container class="d-flex align-center">
-          <v-layout justify-center wrap>
-      <h3 class="display-2 my-4" id="objective-title">Mon objectif ?</h3>
-      <p class="headline my-4" id="objective-text">Accumuler de l'expérience côté Front et Back pour devenir développeur Fullstack</p>
-          </v-layout>
-      </v-container>
+    <v-container class="d-flex align-center">
+      <v-layout justify-center wrap>
+        <h3 class="display-2 my-4" id="objective-title">Mon objectif ?</h3>
+        <p
+          class="headline my-4"
+          id="objective-text"
+        >Accumuler de l'expérience côté Front et Back pour devenir développeur Fullstack</p>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss">
 #objective {
-    background-color: #0288D1;
-    height: 40%;
+  background-color: #0288d1;
+  height: 70vh;
 }
 
 #objective-title,
 #objective-text {
-    width: 100%;
-    color: white;
-    text-align: center;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 </style>

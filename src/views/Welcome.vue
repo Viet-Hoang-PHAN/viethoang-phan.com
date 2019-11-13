@@ -11,7 +11,7 @@
           class="ma-3"
           id="learn-more"
         >EN APPRENDRE PLUS</v-btn>
-        <v-footer absolute color="#01579B">
+        <v-footer absolute color="transparent">
           <v-row>
             <v-col>
               <p
@@ -20,10 +20,10 @@
               <v-row>
                 <v-col id="social-media-icon-list">
                   <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank">
-                    <LinkedInIcon class="icon-2x"/>
+                    <LinkedInIcon class="icon-2x" />
                   </a>
                   <a href="https://github.com/Viet-Hoang-PHAN/" target="_blank">
-                    <GithubIcon class="icon-2x"/>
+                    <GithubIcon class="icon-2x" />
                   </a>
                 </v-col>
               </v-row>
@@ -50,13 +50,12 @@ export default {
         "https://www.linkedin.com/in/viet-hoang-phan-750290183/",
         "https://github.com/Viet-Hoang-PHAN/"
       ]
-    }
+    };
   }
 };
 </script>
 
 <style lang="scss">
-
 .v-application a {
   text-decoration: none;
   color: white !important;
@@ -89,7 +88,6 @@ export default {
   animation: slide-up-footer 1.5s 1s;
   animation-fill-mode: forwards;
 }
-
 
 .container {
   height: 100%;
@@ -137,7 +135,7 @@ export default {
 
 @keyframes slide {
   from {
-    opacity: 0.8;
+    opacity: 1;
     transform: translateY(0);
   }
   to {
@@ -158,11 +156,11 @@ export default {
 }
 
 @keyframes light-zoom {
-    0% {
-      transform: scale(1)
-    }
-    100% {
-      transform:scale(1.2)
-    }
+  0% {
+    transform: scale(1);
   }
+  100% {
+    transform: scale(1.2);
+  }
+}
 </style>

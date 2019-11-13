@@ -2,31 +2,38 @@
   <div id="about-me">
     <v-container class="d-flex">
       <v-layout wrap justify-center>
-            <h3
-              class="display-3"
-            >Viet-Hoang PHAN <br/> Concepteur / Développeur web et mobile</h3>
-            <v-row justify="space-around" id="my-qualities">
-              <v-col
-                v-for="(quality, index) in qualities"
-                :key="index"
-                :cols="quality.cols"
-                :order="quality.order"
-                :align-self="quality.align"
-                class="qualities-container"
-              >
-                <v-img :src="quality.imgLink" height="100px" width="100px" class="quality-icon"></v-img>
-                <p class="qualities">{{ quality.text }}</p>
-              </v-col>
-              <v-col cols="4" order="3">
-                <v-img src="../assets/profil_hoang.png" max-height="300px" max-width="300px" id="profile-picture"></v-img>
-              </v-col>
-            </v-row>
-            <div id="formations">
-              <v-img src="../assets/diploma.svg" max-height="70px" max-width="70px"></v-img>
-              <p id="diploma">Titre professionnel de niveau II (Bac +3) : CONCEPTEUR / DÉVELOPPEUR D'APPLICATIONS
-                <br/>Adrar Digit@l Academy, Pôle Numérique de l'ADRAR
-              </p>
-            </div>
+        <h3 class="display-3">
+          Viet-Hoang PHAN
+          <br />Concepteur / Développeur web et mobile
+        </h3>
+        <v-row id="my-qualities">
+          <v-col
+            v-for="(quality, index) in qualities"
+            :key="index"
+            :cols="quality.cols"
+            :order="quality.order"
+            :align-self="quality.align"
+            class="qualities-container"
+          >
+            <v-img :src="quality.imgLink" height="100px" width="100px" class="quality-icon"></v-img>
+            <p class="qualities">{{ quality.text }}</p>
+          </v-col>
+          <v-col cols="4" order="3">
+            <v-img
+              src="../assets/profil_hoang.png"
+              max-height="300px"
+              max-width="300px"
+              id="profile-picture"
+            ></v-img>
+          </v-col>
+        </v-row>
+        <div id="formations">
+          <v-img src="../assets/diploma.svg" max-height="70px" max-width="70px"></v-img>
+          <p id="diploma">
+            Titre professionnel de niveau II (Bac +3) : CONCEPTEUR / DÉVELOPPEUR D'APPLICATIONS
+            <br />Adrar Digit@l Academy, Pôle Numérique de l'ADRAR
+          </p>
+        </div>
       </v-layout>
     </v-container>
   </div>
@@ -75,8 +82,8 @@ export default {
 
 <style lang="scss">
 #about-me {
-  height: 100%;
-  background-color: #039BE5;
+  height: 100vh;
+  background-color: #039be5;
 }
 
 h3 {
@@ -165,5 +172,4 @@ h3 {
     opacity: 1;
   }
 }
-
 </style>
