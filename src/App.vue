@@ -43,10 +43,8 @@ p {
 }
 
 #app {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background: url("./assets/night_sky.jpg") center center no-repeat;
-  background-size: cover;
 }
 
 .effect-enter-active {

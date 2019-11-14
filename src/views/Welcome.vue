@@ -62,6 +62,8 @@ export default {
 }
 #welcome {
   height: 100%;
+  background: url("../assets/night_sky.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 #welcome-message {

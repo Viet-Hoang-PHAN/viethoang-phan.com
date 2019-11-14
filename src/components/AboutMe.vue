@@ -83,7 +83,11 @@ export default {
 <style lang="scss">
 #about-me {
   height: 100vh;
-  background-color: #039be5;
+    padding-top: 64px;
+      
+  background: url("../assets/night_forest.svg") center no-repeat;
+  background-size: cover;
+  // background-color: #546E7A;
 }
 
 h3 {

@@ -12,7 +12,7 @@ export default new VueRouter({
         {
             path: '/',
             component: Welcome,
-            meta: { transitionName: 'effect'}
+            meta: { transitionName: 'fade'}
         },
         {
             path: '/mon-cv',

@@ -18,7 +18,7 @@ export default {};
 
 <style lang="scss">
 #objective {
-  background-color: #0288d1;
+  background-color: black;
   height: 70vh;
 }
 
