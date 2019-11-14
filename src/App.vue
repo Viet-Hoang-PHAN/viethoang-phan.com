@@ -1,11 +1,9 @@
 <template>
   <v-app>
     <AppBar />
-    <v-content>
       <transition :name="transitionName" mode="out-in">
         <router-view />
       </transition>
-    </v-content>
   </v-app>
 </template>
 
