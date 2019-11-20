@@ -121,10 +121,7 @@ h3 {
   color: white;
 }
 
-.qualities-container {
-  height: 20%;
-  width: 20%;
-}
+
 
 .quality-icon,
 #profile-picture {
@@ -197,15 +194,6 @@ h3 {
 @media (max-width: 600px) {
   #about-me {
     height: auto;
-  }
-  #my-qualities {
-    height: 100%;
-  }
-  .qualities-container {
-    width: 100%;
-  }
-  #profile-container {
-    width: 100%;
   }
 }
 </style>

@@ -3,12 +3,12 @@
     <v-container>
       <v-layout wrap>
         <v-col>
-          <v-row id="skills-title" justify="center" align="center">
+          <v-row id="skills-title" justify="center" align="center" class="my-6">
             <h3 class="display-2">Compétences</h3>
           </v-row>
           <v-row justify="center" align="start">
             <v-col cols="11" md="6" id="skills-container">
-              <v-row v-for="(skill, index) in skills" :key="index" class="skills-card">
+              <v-row v-for="(skill, index) in skills" :key="index" class="skills-percent">
                 <v-col cols="3">
                   <div class="skill-name subtitle-2">{{skill.name}}</div>
                 </v-col>
@@ -62,8 +62,6 @@ export default {
 }
 
 #skills-title {
-  width: 100%;
-  height: 10%;
   text-align: center;
   margin: auto;
 }
@@ -72,15 +70,14 @@ export default {
   color: black;
 }
 
-.skills-card {
-  height: 50px;
-}
-
 #skills-container {
-  background-color: white;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 3px;
+  border: 1px solid white;
 }
 
 .skill-name {
   text-align: center;
 }
+
 </style>

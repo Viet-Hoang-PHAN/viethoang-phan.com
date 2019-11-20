@@ -28,4 +28,5 @@ export default {};
   color: white;
   text-align: center;
 }
+
 </style>

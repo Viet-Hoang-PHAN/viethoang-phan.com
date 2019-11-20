@@ -3,7 +3,7 @@
     <v-container class="d-flex">
       <v-layout wrap>
         <v-row id="experiences-title" justify="center" align="center">
-          <h3 class="display-2">Expériences Professionnelles</h3>
+          <h3 class="display-2 my-6">Expériences Professionnelles</h3>
         </v-row>
         <v-row justify="center">
           <v-col v-for="(experience,index) in experiences" :key="index" cols="12">
@@ -110,8 +110,6 @@ export default {
 }
 
 #experiences-title {
-  width: 100%;
-  height: 10%;
   text-align: center;
 }
 
@@ -121,5 +119,11 @@ export default {
 
 .experience-card {
   margin: auto;
+}
+
+@media (max-width: 600px) {
+  #experiences {
+    height: auto;
+  }
 }
 </style>

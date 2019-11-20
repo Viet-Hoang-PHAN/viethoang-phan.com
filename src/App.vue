@@ -39,7 +39,7 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow: visible;
 }
 *{
   box-sizing: border-box;
