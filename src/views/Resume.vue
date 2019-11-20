@@ -3,6 +3,7 @@
     <AboutMe />
     <Objective />
     <Experiences />
+    <Skills />
   </div>
 </template>
 
@@ -10,17 +11,17 @@
 import AboutMe from "../components/AboutMe";
 import Objective from "../components/Objective";
 import Experiences from "../components/Experiences";
+import Skills from "../components/Skills"
 export default {
   components: {
     AboutMe,
     Objective,
-    Experiences
+    Experiences,
+    Skills
   }
 };
 </script>
 
 <style lang="scss">
-#resume {
-  height: 100%;
-}
+
 </style>

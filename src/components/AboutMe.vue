@@ -1,8 +1,8 @@
 <template>
   <div id="about-me">
     <v-container class="d-flex">
-      <v-layout wrap justify-center>
-        <h3 class="display-3">
+      <v-layout wrap justify-center class="d-flex">
+        <h3 :class="this.titleSize">
           Viet-Hoang PHAN
           <br />Concepteur / Développeur web et mobile
         </h3>
@@ -13,12 +13,13 @@
             :cols="quality.cols"
             :order="quality.order"
             :align-self="quality.align"
+            sm="2"
             class="qualities-container"
           >
             <v-img :src="quality.imgLink" height="100px" width="100px" class="quality-icon"></v-img>
             <p class="qualities">{{ quality.text }}</p>
           </v-col>
-          <v-col cols="4" order="3">
+          <v-col sm="4" cols="12" order="1" order-sm="3" justify-self="center">
             <v-img
               src="../assets/profil_hoang.png"
               max-height="300px"
@@ -48,21 +49,23 @@ export default {
         {
           text: "Persévérant, je fais face à tout les problèmes",
           imgLink: require("../assets/thinking.svg"),
-          cols: 2,
-          order: 1,
+          cols: 12,
+          order: 2,
+          orderSM: 1,
           align: "start"
         },
         {
           text: "Altruiste, j'aide mes collègues du mieux que je peux",
           imgLink: require("../assets/social_care.svg"),
-          cols: 2,
-          order: 2,
+          cols: 12,
+          order: 3,
+          orderSM: 2,
           align: "center"
         },
         {
           text: "Curieux, j'aime découvrir et apprendre des technologies",
           imgLink: require("../assets/book.svg"),
-          cols: 2,
+          cols: 12,
           order: 4,
           align: "center"
         },
@@ -70,12 +73,26 @@ export default {
           text:
             "Organisé, je planifie mes tâches à l'avance pour anticiper la suite",
           imgLink: require("../assets/calendar.svg"),
-          cols: 2,
+          cols: 12,
           order: 5,
           align: "start"
         }
       ]
     };
+  },
+  computed: {
+    titleSize() {
+      const breakpoint = this.$vuetify.breakpoint;
+      if (breakpoint.sm || breakpoint.xs) {
+        return "display-1"
+      }
+      else {
+        return "display-3"
+      }
+    }
+  },
+  mounted() {
+    console.log(this.$vuetify.breakpoint)
   }
 };
 </script>
@@ -174,6 +191,21 @@ h3 {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  #about-me {
+    height: auto;
+  }
+  #my-qualities {
+    height: 100%;
+  }
+  .qualities-container {
+    width: 100%;
+  }
+  #profile-container {
+    width: 100%;
   }
 }
 </style>

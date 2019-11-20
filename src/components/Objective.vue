@@ -1,5 +1,5 @@
 <template>
-  <div id="objective" class="py-12">
+  <div id="objective">
     <v-container class="d-flex align-center">
       <v-layout justify-center wrap>
         <h3 class="display-2 my-4" id="objective-title">Mon objectif ?</h3>

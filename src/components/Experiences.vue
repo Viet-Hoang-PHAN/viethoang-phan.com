@@ -7,7 +7,7 @@
         </v-row>
         <v-row justify="center">
           <v-col v-for="(experience,index) in experiences" :key="index" cols="12">
-            <v-card width="80%" outlined class="experience-card">
+            <v-card width="80%" outlined class="experience-card pa-2" color="rgba(255,255,255,0.6)">
               <v-row class="ma-2">
                 <v-col cols="8">
                   <h4 class="headtitle">{{ experience.positionName }}</h4>
@@ -17,7 +17,7 @@
                     {{ experience.duration }}
                   </div>
                 </v-col>
-                <v-col cols="4" justify-self="end">
+                <v-col cols="4">
                   <v-img
                     :src="experience.logo.link"
                     :width="experience.logo.width"
@@ -39,11 +39,11 @@
               </v-row>
               <v-row>
                 <v-card-text>
-                  <v-card-title class="title">TECHNOLOGIES :</v-card-title>
+                  <v-card-title class="title">OUTILS ET TECHNOLOGIES :</v-card-title>
                   <v-chip
                     v-for="(technologie, index) in experience.technologies"
                     :key="index"
-                    class="mx-1"
+                    class="ma-1"
                   >{{ technologie }}</v-chip>
                 </v-card-text>
               </v-row>
@@ -113,6 +113,10 @@ export default {
   width: 100%;
   height: 10%;
   text-align: center;
+}
+
+#experiences-title > h3 {
+  color: black;
 }
 
 .experience-card {
