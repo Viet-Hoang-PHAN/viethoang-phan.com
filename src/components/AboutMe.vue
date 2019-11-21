@@ -19,7 +19,7 @@
             <v-img :src="quality.imgLink" height="100px" width="100px" class="quality-icon"></v-img>
             <p class="qualities">{{ quality.text }}</p>
           </v-col>
-          <v-col sm="4" cols="12" order="1" order-sm="3" justify-self="center">
+          <v-col sm="4" cols="12" order="1" order-sm="3" align-self="center">
             <v-img
               src="../assets/profil_hoang.png"
               max-height="300px"
