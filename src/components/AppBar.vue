@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app class="d-flex align-end" hide-on-scroll flat fixed color="rgba(0, 0, 0, 0.4)" dark>
+  <v-app-bar app class="d-flex align-end" :hide-on-scroll="this.fixedAppBar" flat fixed color="rgba(0, 0, 0, 0.4)" dark>
     <h1 class="headline text-uppercase title">
       <router-link to="/">
         <span class="name font-weight-light font-italic px-1">Viet-Hoang</span>
@@ -59,6 +59,12 @@ export default {
   watch: {
     group () {
       this.drawer = false;
+    }
+  },
+  computed: {
+    fixedAppBar () {
+      const breakpoint = this.$vuetify.breakpoint;
+      return breakpoint.xs || breakpoint.sm ? false : true
     }
   }
 };

@@ -11,7 +11,7 @@
           class="ma-3"
           id="learn-more"
         >EN APPRENDRE PLUS</v-btn>
-        <v-footer absolute color="transparent">
+        <v-footer absolute color="transparent" id="welcome-footer">
           <v-row>
             <v-col>
               <p
@@ -85,7 +85,7 @@ export default {
   animation-fill-mode: forwards;
 }
 
-.v-footer {
+#welcome-footer {
   visibility: hidden;
   animation: slide-up-footer 1.5s 1s;
   animation-fill-mode: forwards;

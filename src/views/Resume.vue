@@ -5,6 +5,7 @@
     <Experiences />
     <Skills />
     <Passions />
+    <Footer />
   </div>
 </template>
 
@@ -13,14 +14,16 @@ import AboutMe from "../components/AboutMe";
 import Objective from "../components/Objective";
 import Experiences from "../components/Experiences";
 import Skills from "../components/Skills";
-import Passions from "../components/Passions"
+import Passions from "../components/Passions";
+import Footer from "../components/Footer";
 export default {
   components: {
     AboutMe,
     Objective,
     Experiences,
     Skills,
-    Passions
+    Passions,
+    Footer
   }
 };
 </script>

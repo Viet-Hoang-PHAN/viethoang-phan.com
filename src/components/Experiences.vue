@@ -3,11 +3,11 @@
     <v-container class="d-flex">
       <v-layout wrap>
         <v-row id="experiences-title" justify="center" align="center">
-          <h3 class="display-2 my-6">Expériences Professionnelles</h3>
+          <h3 class="display-2 my-6 font-weight-light">Expériences Professionnelles</h3>
         </v-row>
         <v-row justify="center">
           <v-col v-for="(experience,index) in experiences" :key="index" cols="12">
-            <v-card width="80%" outlined class="experience-card pa-2" color="rgba(255,255,255,0.6)">
+            <v-card :width="cardWidth" outlined class="experience-card pa-2" color="rgba(255,255,255,0.6)">
               <v-row class="ma-2">
                 <v-col cols="8">
                   <h4 class="headtitle">{{ experience.positionName }}</h4>
@@ -97,6 +97,12 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    cardWidth () {
+      const breakpoint = this.$vuetify.breakpoint;
+      return breakpoint.xs ? "100%" : "80%";
+    }
   }
 };
 </script>

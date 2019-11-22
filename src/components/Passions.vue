@@ -3,11 +3,10 @@
     <v-container>
       <v-layout wrap>
         <v-col cols="12">
-          <h3 class="display-2 my-6">Mes passions ?</h3>
+          <h3 class="display-2 my-6 font-weight-light" id="passion-title">Mes passions ?</h3>
         </v-col>
-        <v-col v-for="(passion, index) in passions" :key="index" cols="4">
-          <v-row justify="center">
-            <h4 class="display-1 passion-text">{{passion.text}}</h4>
+        <v-col v-for="(passion, index) in passions" :key="index" cols="12" md="4">
+          <v-row justify="center" class="passion-container">
             <v-img
               :src="passion.imgLink"
               height="300px"
@@ -15,6 +14,10 @@
               contain
               class="passion-images"
             ></v-img>
+            <div class="passion-text">
+            <h4 class="title">{{passion.title}}</h4>
+            <p>{{passion.text}}</p>
+            </div>
           </v-row>
         </v-col>
       </v-layout>
@@ -28,16 +31,19 @@ export default {
     return {
       passions: [
         {
-          text: "La cuisine",
-          imgLink: require("../assets/cutting_board.svg")
+          title: "La cuisine",
+          text: "Notamment la cuisine française et asiatique",
+          imgLink: require("../assets/cutting_board.svg"),
         },
         {
-          text: "La culture japonaise",
-          imgLink: require("../assets/japan.svg")
+          title: "La culture japonaise",
+          text: "Arts Martiaux, Animation, Manga, Traditions, Folklore etc...",
+          imgLink: require("../assets/japan.svg"),
         },
         {
-          text: "Les jeux vidéos",
-          imgLink: require("../assets/master_sword.svg")
+          title: "Les jeux vidéos",
+          text: "Principalement MMORPG, RPG et J-RPG",
+          imgLink: require("../assets/master_sword.svg"),
         }
       ]
     };
@@ -51,21 +57,35 @@ export default {
 }
 
 .passion-text {
-  bottom: 0px;
+  position: relative;
+  top: 0;
   width: 300px;
-  height: 300px;
+  height: 100px;
   text-align: center;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  transition: 1s ease-in-out;
 }
-.passion-images {
-  position: absolute;
-}
-.passion-text:hover .passion-images {
-  animation: slideLeft 1s;
+.passion-container:hover .passion-text{
+  top: -100px;
 }
 
-@keyframes slideLeft {
-  100% {
-    left: 0;
+.passion-container {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#passion-title {
+  color: black;
+}
+
+@media (max-width: 960px) {
+  .passion-text {
+    transition: none;
+    top: -100px;
   }
 }
 </style>
