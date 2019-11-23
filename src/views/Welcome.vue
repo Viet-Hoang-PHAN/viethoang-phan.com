@@ -16,7 +16,7 @@
             <v-col>
               <p
                 id="social-media-message"
-              >Tu peux aussi me suivre sur les réseaux sociaux et voir mes travaux</p>
+              >vous pouvez aussi me suivre sur les réseaux sociaux et voir mes travaux</p>
               <v-row>
                 <v-col id="social-media-icon-list">
                   <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank">
