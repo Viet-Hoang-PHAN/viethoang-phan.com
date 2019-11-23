@@ -16,13 +16,13 @@
             <v-col>
               <p
                 id="social-media-message"
-              >vous pouvez aussi me suivre sur les réseaux sociaux et voir mes travaux</p>
+              >Vous pouvez aussi me suivre sur les réseaux sociaux et voir mes travaux</p>
               <v-row>
                 <v-col id="social-media-icon-list">
-                  <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank">
+                  <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" target="_blank" rel="noopener noreferrer">
                     <LinkedInIcon class="icon-2x" />
                   </a>
-                  <a href="https://github.com/Viet-Hoang-PHAN/" target="_blank">
+                  <a href="https://github.com/Viet-Hoang-PHAN/" target="_blank" rel="noopener noreferrer">
                     <GithubIcon class="icon-2x" />
                   </a>
                 </v-col>

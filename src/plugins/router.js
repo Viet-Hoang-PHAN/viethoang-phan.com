@@ -4,10 +4,12 @@ import VueRouter from 'vue-router'
 import Welcome from "../views/Welcome";
 import Resume from "../views/Resume";
 import Contact from "../views/Contact";
+import ErrorView from "../views/Error";
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
+    mode: 'history',
     routes: [
         {
             path: '/',
@@ -23,6 +25,10 @@ export default new VueRouter({
             path: '/contact',
             component: Contact,
             meta: { transitionName: 'fade'}
+        },
+        {
+            path: '*',
+            component: ErrorView,
         }
     ]
 })

@@ -6,7 +6,7 @@
         id="contact-title"
       >Mon profil vous intéresse ?</h2>
     </v-container>
-    <v-footer absolute color="transparent" dark class="d-flex align-end" height="300px">
+    <v-footer :absolute="this.$vuetify.breakpoint.xs ? false : true" color="black" dark class="d-flex align-end">
       <v-row>
         <v-col
           cols="12"
@@ -21,7 +21,8 @@
           sm="4"
           class="text-center"
         >
-        <a href="/assets/CV_Viet-Hoang_PHAN.pdf" download class="contact-link">Télécharge mon CV</a> <br/>
+        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        <a :href="resumePDF" class="contact-link">Télécharge mon CV</a> <br/>
         <a href="https://www.linkedin.com/in/viet-hoang-phan-750290183/" class="contact-link">Ou suis moi sur LinkedIn</a>
         </v-col>
         <v-col
@@ -43,7 +44,11 @@
 
 <script>
 export default {
-
+  data: () => {
+    return {
+      resumePDF: require("./../assets/CV_Viet-Hoang_PHAN.pdf")
+    }
+  }
 };
 </script>
 
@@ -70,5 +75,11 @@ export default {
 
 .contact-link:hover {
   text-shadow: 0 0 10px white, 0 0 20px #ffe082, 0 0 30px #ffe082;
+}
+
+@media (max-width: 600px) {
+  #contact {
+    height: 150%;
+  }
 }
 </style>

@@ -6,12 +6,12 @@
         <v-btn
           outlined
           href="https://github.com/Viet-Hoang-PHAN/viethoang-phan.com"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >Voir le projet</v-btn>
       </v-col>
       <v-col cols="12" sm="6" class="py-6 blue lighten-1">
         <p class="headline font-weight-light">Besoin de plus d'informations ?</p>
-        <v-btn outlined to="/contact">Contacte moi</v-btn>
+        <v-btn outlined to="/contact">Contactez-moi</v-btn>
       </v-col>
 
       <v-col cols="12" class="py-6">
