@@ -3,14 +3,14 @@
     <v-container>
       <v-layout wrap>
         <v-col cols="12">
-          <h3 class="display-2 my-6 font-weight-light" id="passion-title">Mes passions ?</h3>
+          <h3 class="display-1 my-6 font-weight-light" id="passion-title">Mes passions ?</h3>
         </v-col>
         <v-col v-for="(passion, index) in passions" :key="index" cols="12" md="4">
           <v-row justify="center" class="passion-container">
             <v-img
               :src="passion.imgLink"
-              height="300px"
-              width="300px"
+              :height="sizeImg"
+              :width="sizeImg"
               contain
               class="passion-images"
             ></v-img>
@@ -47,6 +47,12 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    sizeImg () {
+      const breakpoint = this.$vuetify.breakpoint;
+      return breakpoint.xs ? "200px" : "300px"
+    }
   }
 };
 </script>
@@ -87,5 +93,10 @@ export default {
     transition: none;
     top: -100px;
   }
+
+  .passion-container {
+  width: 200px;
+  height: 200px;
+}
 }
 </style>

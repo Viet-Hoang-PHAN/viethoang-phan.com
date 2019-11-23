@@ -4,7 +4,7 @@
       <v-layout wrap>
         <v-col>
           <v-row id="skills-title" justify="center" align="center" class="my-6">
-            <h3 class="display-2 font-weight-light">Compétences</h3>
+            <h3 class="display-1 font-weight-light">Compétences</h3>
           </v-row>
           <v-row justify="center" align="start">
             <v-col cols="11" md="6" id="skills-container">

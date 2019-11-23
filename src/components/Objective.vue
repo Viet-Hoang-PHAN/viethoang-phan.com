@@ -2,7 +2,7 @@
   <div id="objective">
     <v-container class="d-flex align-center">
       <v-layout justify-center wrap>
-        <h3 class="display-2 my-4 font-weight-light" id="objective-title">Mon objectif ?</h3>
+        <h3 class="display-1 my-4 font-weight-light" id="objective-title">Mon objectif ?</h3>
         <p
           class="headline my-4"
           id="objective-text"

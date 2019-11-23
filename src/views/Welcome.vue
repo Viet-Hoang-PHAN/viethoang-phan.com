@@ -2,7 +2,7 @@
   <div id="welcome">
     <v-container class="d-flex justify-center align-center flex-wrap">
       <v-layout justify-center text-center wrap>
-        <h2 id="welcome-message" class="display-3 ma-3">Envie de me connaître ?</h2>
+        <h2 id="welcome-message" class="display-2 ma-3 font-weight-light">Envie de me connaître ?</h2>
         <v-btn
           outlined
           large

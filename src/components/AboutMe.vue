@@ -22,7 +22,9 @@
           <v-col sm="4" cols="12" order="1" order-sm="3" align-self="center">
             <v-img
               src="../assets/profil_hoang.png"
+              min-height="180px"
               max-height="300px"
+              min-width="180px"
               max-width="300px"
               id="profile-picture"
             ></v-img>

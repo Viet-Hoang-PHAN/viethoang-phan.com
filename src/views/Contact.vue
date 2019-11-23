@@ -81,5 +81,8 @@ export default {
   #contact {
     height: 150%;
   }
+  .contact-link {
+    text-shadow: 0 0 10px white, 0 0 20px #ffe082, 0 0 30px #ffe082;
+  }
 }
 </style>

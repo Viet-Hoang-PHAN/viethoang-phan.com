@@ -34,6 +34,7 @@ export default {
 
 <style lang="scss">
 
+
 *{
   box-sizing: border-box;
 }
