@@ -31,7 +31,7 @@
           class="text-right"
         >
         <div class="pb-4">ADRESSE</div>
-        <p>Viet-Hoang PHAN<br/>275 Route de Seysses<br/>31100 TOULOUSE</p>
+        <p>Viet-Hoang PHAN<br/>31100 TOULOUSE</p>
         </v-col>
 <v-col cols="12" class="text-center">
           {{ new Date().getFullYear() }} —
